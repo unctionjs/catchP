@@ -1,13 +1,11 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import tempLate from "./"
+import catchP from "./"
 
-test(({same, end}) => {
-  same(
-    tempLate(true),
-    false
-  )
+test(({same}) => {
+  const rejection = (value) => same(value, new Error("a"))
+  const promise = Promise.reject(new Error("a"))
 
-  end()
+  return catchP(rejection)(promise)
 })

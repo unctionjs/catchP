@@ -1,3 +1,5 @@
-export default function tempLate (alpha: mixed): mixed {
-  return alpha
+export default function catchP (rejection: any => any): Function {
+  return function catchPrejection (promise: Promise<any>): Promise<any> {
+    return promise.catch(rejection)
+  }
 }
