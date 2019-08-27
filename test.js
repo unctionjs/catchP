@@ -1,7 +1,7 @@
-/* eslint-disable flowtype/require-return-type */
+
 import {test} from "tap";
 
-import catchP from "./index";
+import catchP from "./";
 
 test(({same}) => {
   const rejection = (value) => same(value, new Error("a"));
