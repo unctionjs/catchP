@@ -4,9 +4,15 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> UnaryFunctionType => PromiseType => PromiseType
+> MapperFunctionType<C, B> => Promise<A> => Promise<A | B>
 
 A port of the `Promise.prototype.catch()` function.
+
+``` javascript
+catchP(
+  (exception) => console.error(exception)
+)(Promise.all([fetchUser, fetchProject]))
+```
 
 Credit: @keithamus
 
