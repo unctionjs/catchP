@@ -1,5 +1,5 @@
 
-import catchP from "./index.ts";
+import catchP from "./index";
 
 test(() => {
   const rejection = (value) => expect(value).toEqual(new Error("a"));
