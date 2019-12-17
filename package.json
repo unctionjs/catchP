@@ -1,6 +1,6 @@
 {
   "name": "@unction/catchp",
-  "version": "4.1.3",
+  "version": "4.1.4",
   "description": "A currable version of Promise.prototype.catch",
   "keywords": [
     "unction",
@@ -58,8 +58,7 @@
     "browser.js",
     "types/*.d.ts"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "module": "module.js",
   "browser": "browser.js",
   "types": "types.d.ts",
